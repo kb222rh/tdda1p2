@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><TestSessionContainer xmlns="http://www.codecover.org/xml/testsession-container" Date="1510864113046" TestSessionContainerId="9976e7da-a85f-4e79-8830-b51a0e27008c" version="1.0">
+<SrcFileList>
+<SrcFile Content="package BlackJack;&#13;&#10;&#13;&#10;public class Card {&#13;&#10;&#13;&#10;&#9;public Card(Object object, Object object2) {&#13;&#10;&#9;throw new IllegalArgumentException();&#13;&#10;&#9;}&#13;&#10;&#13;&#10;}&#13;&#10;" Filename="Card.java" Intrnl_Id="1"/>
+</SrcFileList>
+<CritList>
+<CritListEntry Name="org.codecover.model.utils.criteria.LoopCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.QMOCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.ConditionCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.BranchCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.SynchronizedStatementCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.StatementCoverage" PluginName="org.codecover"/>
+</CritList>
+<BoolOpList/>
+<HierarchyLvlTypeList>
+<HierarchyLvlType EnglishName="package" IntrnlName="package" Intrnl_Id="2"/>
+<HierarchyLvlType EnglishName="method" IntrnlName="method" Intrnl_Id="3"/>
+<HierarchyLvlType EnglishName="class" IntrnlName="class" Intrnl_Id="4"/>
+<HierarchyLvlType EnglishName="default package" IntrnlName="default package" Intrnl_Id="5"/>
+</HierarchyLvlTypeList>
+<MASTRoot>
+<HierarchyLvl HierarchyLvlId="12" HierarchyLvlTypeId="5" Intrnl_Id="6" Name="default package">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="11" HierarchyLvlTypeId="2" Intrnl_Id="7" Name="BlackJack">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="10" HierarchyLvlTypeId="4" Intrnl_Id="8" Name="Card">
+<Header>
+<Loc EndOffset="39" SrcFileId="1" StartOffset="22"/>
+</Header>
+<LocList>
+<Loc EndOffset="139" SrcFileId="1" StartOffset="22"/>
+</LocList>
+<HierarchyLvl HierarchyLvlId="9" HierarchyLvlTypeId="3" Intrnl_Id="9" Name="Card">
+<Header>
+<Loc EndOffset="88" SrcFileId="1" StartOffset="46"/>
+</Header>
+<LocList>
+<Loc EndOffset="134" SrcFileId="1" StartOffset="46"/>
+</LocList>
+<StmntSeq Intrnl_Id="10">
+<LocList>
+<Loc EndOffset="130" SrcFileId="1" StartOffset="93"/>
+</LocList>
+<BasicStmnt CovItemId="S1" CovItemPrefix="BlackJack.Card.java" Intrnl_Id="11">
+<LocList>
+<Loc EndOffset="130" SrcFileId="1" StartOffset="93"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+</MASTRoot>
+</TestSessionContainer>
