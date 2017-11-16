@@ -4,7 +4,8 @@ package BlackJack;
 
 public class Card {
 
-	
+	private Card.color c;
+	private Card.value v;
 
 		public enum color{ 
 			Spades
@@ -17,8 +18,12 @@ public class Card {
 
 	}
 
-	public Card(Object object, Object object2) {
+	public Card(Card.value cV, Card.color cC) {
+		if (cV==null||cC==null)
 		throw new IllegalArgumentException();
+		
+		v=cV;
+		c=cC;
 	}
 
 }
