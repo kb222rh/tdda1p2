@@ -14,7 +14,7 @@ public class Card {
 
 
 	public enum value {
-		Ace
+		Ace, King, Queen, Knight, ten, nine, eight, seven, six, five, four, three, two
 	}
 
 	public Card(Card.value cV, Card.color cC) {
