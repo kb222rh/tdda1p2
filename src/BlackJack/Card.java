@@ -17,8 +17,8 @@ public class Card {
 	
 		
 		Ace("A", 11), King("K", 10), Queen("Q", 10), Knight("Kn", 10), ten("10", 10), nine("9", 9), eight("8", 8), seven("7", 7), six("6", 6), five("5", 5), four("4", 4), three("3", 3), two("2", 2);
-		private final String face;
-		private final int value;
+		public final String face;
+		public final int value;
 		private NAMES(String f, int v){
 			this.face=f;
 			this.value=v;
@@ -34,7 +34,7 @@ public class Card {
 	}
 
 
-	public Object getValue() {
+	public int getValue() {
 		// TODO Auto-generated method stub
 		return 11;
 	}

@@ -54,10 +54,27 @@ public class utCard {
 			}
 		}
 	}
+	
 	@Test
 	public void Card_getValue_AceOfSpadesReturnsEleven(){
 		int expected = 11;
 		Card actual= new Card(Card.NAMES.Ace, Card.SUITES.Spades);	
-		assertEquals(actual.getValue(), expected);		
+		assertEquals(expected, actual.getValue());		
+	}
+	@Test
+	public void Card_getValue_ReturnsCorrectValue(){
+		for (SUITES c : SUITES.values()){
+			for (NAMES v : NAMES.values()){
+				try{
+					Card sut = new Card(v, c);
+					int expected = v.value;
+					int actual=sut.getValue();
+						assertEquals(expected, actual);
+					
+				} catch(Exception e) {
+					fail();
+				}
+			}
+		}	
 	}
 }
