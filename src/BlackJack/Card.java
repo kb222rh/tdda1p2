@@ -8,7 +8,7 @@ public class Card {
 	private Card.value v;
 
 	public enum color{ 
-		Spades
+		Spades, Hearts, Clubs, Diamonds
 	}
 
 
