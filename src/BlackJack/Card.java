@@ -8,7 +8,11 @@ public class Card {
 	public Card.NAMES v;
 
 	public enum SUITES{ 
-		Spades, Hearts, Clubs, Diamonds
+		Spades("♠"), Hearts("♥"), Clubs("♦"), Diamonds("♣");
+		public final String symbol;
+		private SUITES(String s){
+			this.symbol=s;
+		}
 	}
 
 
