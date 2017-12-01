@@ -36,7 +36,7 @@ public class Card {
 
 	public Object getValue() {
 		// TODO Auto-generated method stub
-		return null;
+		return 11;
 	}
 
 }
