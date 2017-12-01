@@ -4,20 +4,21 @@ package BlackJack;
 
 public class Card {
 
-	public Card.color c;
-	public Card.value v;
+	public Card.SUITES c;
+	public Card.NAMES v;
 
-	public enum color{ 
+	public enum SUITES{ 
 		Spades, Hearts, Clubs, Diamonds
 	}
 
 
 
-	public enum value {
+	public enum NAMES {
 		Ace, King, Queen, Knight, ten, nine, eight, seven, six, five, four, three, two
 	}
+	
 
-	public Card(Card.value cV, Card.color cC) {
+	public Card(Card.NAMES cV, Card.SUITES cC) {
 		if (cV==null||cC==null)
 			throw new IllegalArgumentException();
 		v=cV;
