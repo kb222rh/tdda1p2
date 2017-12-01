@@ -54,4 +54,10 @@ public class utCard {
 			}
 		}
 	}
+	@Test
+	public void Card_getValue_AceOfSpadesReturnsEleven(){
+		int expected = 11;
+		Card actual= new Card(Card.NAMES.Ace, Card.SUITES.Spades);	
+		assertEquals(actual.getValue(), expected);		
+	}
 }
