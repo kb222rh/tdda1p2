@@ -77,4 +77,20 @@ public class utCard {
 			}
 		}	
 	}
+	@Test
+	public void Vard_getFace_ReturnsCorrectFace(){
+		for (SUITES c : SUITES.values()){
+			for (NAMES v : NAMES.values()){
+				try{
+					Card sut = new Card(v, c);
+					String expected = v.face+c.symbol;
+					String actual=sut.getFace();
+						assertEquals(expected, actual);
+					
+				} catch(Exception e) {
+					fail();
+				}
+			}
+		}	
+	}
 }

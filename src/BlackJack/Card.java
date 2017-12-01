@@ -43,4 +43,10 @@ public class Card {
 		return v.value;
 	}
 
+
+	public String getFace() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
