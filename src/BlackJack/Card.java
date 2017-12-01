@@ -46,7 +46,7 @@ public class Card {
 
 	public String getFace() {
 		// TODO Auto-generated method stub
-		return null;
+		return v.face+c.symbol;
 	}
 
 }
