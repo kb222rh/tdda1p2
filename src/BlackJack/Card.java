@@ -7,21 +7,19 @@ public class Card {
 	private Card.color c;
 	private Card.value v;
 
-		public enum color{ 
-			Spades
-		}
+	public enum color{ 
+		Spades
+	}
 
-	
+
 
 	public enum value {
 		Ace
-
 	}
 
 	public Card(Card.value cV, Card.color cC) {
 		if (cV==null||cC==null)
-		throw new IllegalArgumentException();
-		
+			throw new IllegalArgumentException();
 		v=cV;
 		c=cC;
 	}
