@@ -1,7 +1,4 @@
 package BlackJack;
-
-
-
 public class Card {
 
 	public Card.SUITES c;
@@ -15,11 +12,7 @@ public class Card {
 		}
 	}
 
-
-
 	public enum NAMES {
-	
-		
 		Ace("A", 11), King("K", 10), Queen("Q", 10), Knight("Kn", 10), ten("10", 10), nine("9", 9), eight("8", 8), seven("7", 7), six("6", 6), five("5", 5), four("4", 4), three("3", 3), two("2", 2);
 		public final String face;
 		public final int value;
@@ -28,7 +21,6 @@ public class Card {
 			this.value=v;
 		}
 	}
-	
 
 	public Card(Card.NAMES cV, Card.SUITES cC) {
 		if (cV==null||cC==null)
@@ -37,16 +29,11 @@ public class Card {
 		c=cC;
 	}
 
-
 	public int getValue() {
-		// TODO Auto-generated method stub
 		return v.value;
 	}
 
-
 	public String getFace() {
-		// TODO Auto-generated method stub
 		return v.face+c.symbol;
 	}
-
 }

@@ -1,10 +1,6 @@
 package TestSuite;
-
 import static org.junit.Assert.*;
-
 import org.junit.Test;
-import org.mockito.Mockito;
-
 import BlackJack.Card;
 import BlackJack.Card.SUITES;
 import BlackJack.Card.NAMES;
@@ -24,8 +20,7 @@ public class utCard {
 		}
 	}
 
-//This was abit tricky. I check if there are 4 values in color Enum, and then check that their names are compliant with traditional card suites
-// 
+	//This was abit tricky. I check if there are 4 values in color Enum, and then check that their names are compliant with traditional card suites 
 	@Test
 	public void Card_Constructor_4ColorsExist(){
 		for (SUITES c : SUITES.values()){
@@ -40,7 +35,7 @@ public class utCard {
 			assertTrue(c.name().equals("Ace")||c.name().equals("King")||c.name().equals("Queen")||c.name().equals("Knight")||c.name().equals("ten")||c.name().equals("nine")||c.name().equals("eight")||c.name().equals("seven")||c.name().equals("six")||c.name().equals("five")||c.name().equals("four")||c.name().equals("three")||c.name().equals("two"));
 		}
 	}
-	
+
 	//This is technically redundant, since it is green.
 	@Test
 	public void Card_Constructor_AllCardsCreationTest(){
@@ -54,7 +49,7 @@ public class utCard {
 			}
 		}
 	}
-	
+
 	@Test
 	public void Card_getValue_AceOfSpadesReturnsEleven(){
 		int expected = 11;
@@ -69,8 +64,8 @@ public class utCard {
 					Card sut = new Card(v, c);
 					int expected = v.value;
 					int actual=sut.getValue();
-						assertEquals(expected, actual);
-					
+					assertEquals(expected, actual);
+
 				} catch(Exception e) {
 					fail();
 				}
@@ -85,8 +80,8 @@ public class utCard {
 					Card sut = new Card(v, c);
 					String expected = v.face+c.symbol;
 					String actual=sut.getFace();
-						assertEquals(expected, actual);
-					
+					assertEquals(expected, actual);
+
 				} catch(Exception e) {
 					fail();
 				}
