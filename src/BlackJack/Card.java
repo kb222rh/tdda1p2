@@ -4,8 +4,8 @@ package BlackJack;
 
 public class Card {
 
-	private Card.color c;
-	private Card.value v;
+	public Card.color c;
+	public Card.value v;
 
 	public enum color{ 
 		Spades, Hearts, Clubs, Diamonds
