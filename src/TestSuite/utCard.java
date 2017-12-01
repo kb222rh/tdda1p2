@@ -32,4 +32,11 @@ public class utCard {
 			assertTrue(c.name().equals("Spades")||c.name().equals("Hearts")||c.name().equals("Clubs")||c.name().equals("Diamonds"));
 		}
 	}
+	@Test
+	public void Card_Constructor_allCardValuesExist(){
+		for (value c : value.values()){
+			assertTrue(value.values().length==13);
+			assertTrue(c.name().equals("Ace")||c.name().equals("King")||c.name().equals("Queen")||c.name().equals("Knight")||c.name().equals("ten")||c.name().equals("nine")||c.name().equals("eight")||c.name().equals("seven")||c.name().equals("six")||c.name().equals("five")||c.name().equals("four")||c.name().equals("three")||c.name().equals("two"));
+		}
+	}
 }
