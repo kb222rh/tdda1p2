@@ -12,6 +12,7 @@ public class KeyInput {
 		this.inTo=m_in;
 		this.outTo=p;
 	}
+
 	public boolean read() throws IOException {
 		// TODO Auto-generated method stub
 		return inTo.readLine()=="q";
