@@ -19,16 +19,14 @@ public class KeyInput {
 	}
 
 	public boolean hitSignal() throws IOException {
-		// TODO Auto-generated method stub
 		return read()=="h";
 	}
 	public String read() throws IOException {
-	String s=inTo.readLine();
+		String s=inTo.readLine();
 		return s;
 	}
 
 	public boolean standSignal() throws IOException {
-		// TODO Auto-generated method stub
 		return read()=="s";
 	}
 }
