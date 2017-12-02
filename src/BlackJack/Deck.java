@@ -12,17 +12,15 @@ public class Deck {
 	public Deck(){
 		for (SUITES c : SUITES.values()){
 			for (NAMES v : NAMES.values()){
-			stack.add(new Card(v, c));	
+				stack.add(new Card(v, c));	
 			}
-			}
+		}
 	}
 	public int size() {
-		// TODO Auto-generated method stub
 		return stack.size();
 	}
 
 	public Card drawCard() {
-		// TODO Auto-generated method stub
 		return stack.get(0);
 	}
 	public boolean equals(Deck o){
@@ -38,6 +36,6 @@ public class Deck {
 	}
 	public void shuffle() {
 		Collections.shuffle(stack);
-		
+
 	}
 }
