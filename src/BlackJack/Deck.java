@@ -25,5 +25,5 @@ public class Deck {
 		// TODO Auto-generated method stub
 		return stack.get(0);
 	}
-
+	
 }

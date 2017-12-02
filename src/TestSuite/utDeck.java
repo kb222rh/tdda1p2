@@ -15,6 +15,11 @@ public class utDeck {
 		for (int i=0; i<sut.size(); i++)
         assertTrue(sut.drawCard() instanceof Card);
 	}
-
+	@Test
+	public void Deck_equals_ReturnsTrueForNewDecks(){
+		Deck a=new Deck();
+		Deck b=new Deck();
+		assertTrue(a.equals(b));
+	}
 }
 
