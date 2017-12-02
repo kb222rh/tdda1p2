@@ -21,9 +21,11 @@ Player p;
 	public void Player_getCard_DrawsCardFromDeck() {
 		Deck deckStub=Mockito.mock(Deck.class);
 		Card cardStub=Mockito.mock(Card.class);
-		Card actual= p.getCard(deckStub);
+	
 		Mockito.when(deckStub.drawCard()).thenReturn(cardStub);
 		Mockito.when(cardStub.getFace()).thenReturn("Ace of Spades");
+		
+		Card actual= p.getCard(deckStub);
 		assertEquals(deckStub.drawCard(), actual);
 		
 	}
