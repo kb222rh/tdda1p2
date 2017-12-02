@@ -15,7 +15,6 @@ public class Player {
 	}
 
 	public ArrayList<Card> showHand() {
-		// TODO Auto-generated method stub
 		return hand;
 	}
 
