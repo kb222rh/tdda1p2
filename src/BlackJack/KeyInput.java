@@ -1,6 +1,7 @@
 package BlackJack;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.PrintStream;
 
 
@@ -11,8 +12,8 @@ public class KeyInput {
 		this.inTo=m_in;
 		this.outTo=p;
 	}
-	public boolean read() {
+	public boolean read() throws IOException {
 		// TODO Auto-generated method stub
-		return false;
+		return inTo.readLine()=="q";
 	}
 }
