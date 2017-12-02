@@ -37,6 +37,6 @@ public class Card {
 		return v.face+" of "+c.symbol;
 	}
 	public boolean equals(Card o){
-		return true;
+		return this.getFace().equals(o.getFace());
 	}
 }
