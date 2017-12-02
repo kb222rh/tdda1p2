@@ -21,7 +21,9 @@ public class Deck {
 	}
 
 	public Card drawCard() {
-		return stack.get(0);
+		Card drawn=stack.get(0);
+		stack.remove(0);
+		return drawn;
 	}
 	public boolean equals(Deck o){
 		int cardEqualityCounter=0;
