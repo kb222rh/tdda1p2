@@ -47,7 +47,6 @@ public class utDeck {
 	public void newDeck_drawCard_popsFirstCardFromDeck(){
 		NAMES iName;
 		SUITES iSuite;
-
 		for (int j=0; j<4; j++){
 			for (int i=0; i<13; i++){
 				iName=NAMES.values()[i];
