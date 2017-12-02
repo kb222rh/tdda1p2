@@ -1,7 +1,6 @@
 package TestSuite;
 
 import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 import BlackJack.Card;
@@ -20,6 +19,13 @@ public class utDeck {
 		Deck a=new Deck();
 		Deck b=new Deck();
 		assertTrue(a.equals(b));
+	}
+	@Test
+	public void Deck_equals_ReturnsFalseAfterShuffle(){
+		Deck a=new Deck();
+		Deck b=new Deck();
+		b.shuffle();
+		assertFalse(a.equals(b));
 	}
 }
 

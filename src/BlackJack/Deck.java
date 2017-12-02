@@ -28,4 +28,8 @@ public class Deck {
 	public boolean equals(Deck o){
 		return true;
 	}
+	public void shuffle() {
+		// TODO Auto-generated method stub
+		
+	}
 }
