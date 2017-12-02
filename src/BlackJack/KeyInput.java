@@ -26,4 +26,9 @@ public class KeyInput {
 	String s=inTo.readLine();
 		return s;
 	}
+
+	public boolean standSignal() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
