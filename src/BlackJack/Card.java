@@ -36,5 +36,7 @@ public class Card {
 	public String getFace() {
 		return v.face+" of "+c.symbol;
 	}
-
+	public boolean equals(Card o){
+		return true;
+	}
 }
