@@ -15,12 +15,12 @@ public class KeyInput {
 	}
 
 	public boolean quitSignal() throws IOException{
-		return false;
+		return read()=="q";
 	}
 
 	public boolean hitSignal() throws IOException {
 		// TODO Auto-generated method stub
-		return false;
+		return read()=="h";
 	}
 	public String read() throws IOException {
 	String s=inTo.readLine();
