@@ -25,5 +25,7 @@ public class Deck {
 		// TODO Auto-generated method stub
 		return stack.get(0);
 	}
-	
+	public boolean equals(Deck o){
+		return true;
+	}
 }
