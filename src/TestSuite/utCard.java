@@ -94,4 +94,10 @@ public class utCard {
 		Card c=new Card(NAMES.Eight, SUITES.Diamonds);
 		assertTrue(b.equals(c));
 	}
+	@Test
+	public void Card_equals_ReturnsFalseIfFacesAreNotSame(){
+		Card b=new Card(NAMES.Ace,SUITES.Clubs);
+		Card c=new Card(NAMES.Eight, SUITES.Diamonds);
+		assertFalse(b.equals(c));
+	}
 }
