@@ -3,14 +3,20 @@ package BlackJack;
 import java.util.ArrayList;
 
 public class Player {
+	ArrayList<Card> hand;
+	public Player(){
+		this.hand=new ArrayList<Card>();
+	}
 
 	public Card getCard(Deck d) {
-		return d.drawCard();
+		Card drawn=d.drawCard();
+		hand.add(drawn);
+		return drawn;
 	}
 
 	public ArrayList<Card> showHand() {
 		// TODO Auto-generated method stub
-		return null;
+		return hand;
 	}
 
 }
