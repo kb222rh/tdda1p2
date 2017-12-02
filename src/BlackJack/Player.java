@@ -4,7 +4,7 @@ public class Player {
 
 	public Card getCard(Deck d) {
 		// TODO Auto-generated method stub
-		return null;
+		return d.drawCard();
 	}
 
 }
