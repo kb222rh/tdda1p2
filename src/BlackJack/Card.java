@@ -5,7 +5,7 @@ public class Card {
 	public Card.NAMES v;
 
 	public enum SUITES{ 
-		Spades("♠"), Hearts("♥"), Clubs("♦"), Diamonds("♣");
+		Spades("Spades"), Hearts("Hearts"), Clubs("Clubs"), Diamonds("Diamonds");
 		public final String symbol;
 		private SUITES(String s){
 			this.symbol=s;
@@ -13,7 +13,7 @@ public class Card {
 	}
 
 	public enum NAMES {
-		Ace("A", 11), King("K", 10), Queen("Q", 10), Knight("Kn", 10), ten("10", 10), nine("9", 9), eight("8", 8), seven("7", 7), six("6", 6), five("5", 5), four("4", 4), three("3", 3), two("2", 2);
+		Ace("Ace", 11), King("King", 10), Queen("Queen", 10), Knight("Knight", 10), Ten("Ten", 10), Nine("Nine", 9), Eight("Eight", 8), Seven("Seven", 7), Six("Six", 6), Five("Five", 5), Four("Four", 4), Three("Three", 3), Two("Two", 2);
 		public final String face;
 		public final int value;
 		private NAMES(String f, int v){
@@ -34,6 +34,7 @@ public class Card {
 	}
 
 	public String getFace() {
-		return v.face+c.symbol;
+		return v.face+" of "+c.symbol;
 	}
+
 }

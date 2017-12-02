@@ -32,7 +32,7 @@ public class utCard {
 	public void Card_Constructor_allCardValuesExist(){
 		for (NAMES c : NAMES.values()){
 			assertTrue(NAMES.values().length==13);
-			assertTrue(c.name().equals("Ace")||c.name().equals("King")||c.name().equals("Queen")||c.name().equals("Knight")||c.name().equals("ten")||c.name().equals("nine")||c.name().equals("eight")||c.name().equals("seven")||c.name().equals("six")||c.name().equals("five")||c.name().equals("four")||c.name().equals("three")||c.name().equals("two"));
+			assertTrue(c.name().equals("Ace")||c.name().equals("King")||c.name().equals("Queen")||c.name().equals("Knight")||c.name().equals("Ten")||c.name().equals("Nine")||c.name().equals("Eight")||c.name().equals("Seven")||c.name().equals("Six")||c.name().equals("Five")||c.name().equals("Four")||c.name().equals("Three")||c.name().equals("Two"));
 		}
 	}
 
@@ -73,12 +73,12 @@ public class utCard {
 		}	
 	}
 	@Test
-	public void Vard_getFace_ReturnsCorrectFace(){
+	public void Card_getFace_ReturnsCorrectFace(){
 		for (SUITES c : SUITES.values()){
 			for (NAMES v : NAMES.values()){
 				try{
 					Card sut = new Card(v, c);
-					String expected = v.face+c.symbol;
+					String expected = v.face+" of "+c.symbol;
 					String actual=sut.getFace();
 					assertEquals(expected, actual);
 
@@ -87,5 +87,11 @@ public class utCard {
 				}
 			}
 		}	
+	}
+	@Test
+	public void Card_equals_ReturnsTrueIfFacesAreSame(){
+		Card b=new Card(NAMES.Eight,SUITES.Diamonds);
+		Card c=new Card(NAMES.Eight, SUITES.Diamonds);
+		assertTrue(b.equals(c));
 	}
 }
