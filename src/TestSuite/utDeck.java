@@ -6,7 +6,7 @@ import org.junit.Test;
 import BlackJack.Card;
 import BlackJack.Deck;
 public class utDeck {
-
+	
 	@Test
 	public void Deck_constructor_has52Cards() {
 		Deck sut=new Deck();

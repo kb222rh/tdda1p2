@@ -26,10 +26,18 @@ public class Deck {
 		return stack.get(0);
 	}
 	public boolean equals(Deck o){
-		return true;
+		int cardEqualityCounter=0;
+		for (Card c: stack){
+			int index=stack.indexOf(c);
+			if (c.equals(o.stack.get(index)))
+				cardEqualityCounter++;
+		}
+		if (cardEqualityCounter==stack.size())
+			return true;
+		return false;
 	}
 	public void shuffle() {
-		// TODO Auto-generated method stub
+		Collections.shuffle(stack);
 		
 	}
 }
