@@ -8,13 +8,22 @@ import java.io.PrintStream;
 public class KeyInput {
 	BufferedReader inTo;
 	PrintStream outTo;
+	String saved;
 	public KeyInput(BufferedReader m_in, PrintStream p){
 		this.inTo=m_in;
 		this.outTo=p;
 	}
 
-	public boolean read() throws IOException {
+	public boolean quitSignal() throws IOException{
+		return false;
+	}
+
+	public boolean hitSignal() throws IOException {
 		// TODO Auto-generated method stub
-		return inTo.readLine()=="q";
+		return false;
+	}
+	public String read() throws IOException {
+	String s=inTo.readLine();
+		return s;
 	}
 }
