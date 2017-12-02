@@ -27,8 +27,8 @@ public class KeyInput {
 		return s;
 	}
 
-	public boolean standSignal() {
+	public boolean standSignal() throws IOException {
 		// TODO Auto-generated method stub
-		return false;
+		return read()=="s";
 	}
 }

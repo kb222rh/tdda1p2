@@ -37,7 +37,7 @@ public class utKeyInput {
 	}
 	@Test
 	public void keyInput_read_sendsStandCommandOnS() throws IOException {
-		Mockito.when(m_in.readLine()).thenReturn("S");
+		Mockito.when(m_in.readLine()).thenReturn("s");
 		assertTrue(k.standSignal());
 	}
 }
