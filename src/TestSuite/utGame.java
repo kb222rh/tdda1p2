@@ -118,6 +118,13 @@ public class utGame {
 		g.run(m_player, m_dealer, m_deck);
 		Mockito.verify(m_dealer, Mockito.atLeast(3)).getCard(m_deck);
 	}
-	
+	@Test
+	public void Game_isWinner_PrintsDealerWinnerIfDealerHandBeatsPlayer(){
+		Mockito.when(m_dealer.calcScore()).thenReturn(21);
+		Mockito.when(m_player.calcScore()).thenReturn(20);
+		String expected="Dealer wins!";
+		g.isWinner(m_player, m_player);
+		Mockito.verify(m_out).println(expected);
+	}
 }
 

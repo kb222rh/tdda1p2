@@ -29,7 +29,7 @@ public class Game {
 
 			this.out.println("Player: "+player.calcScore());
 			showCards(player);
-
+			
 			this.showMenu();
 			input.read();
 			if(input.standSignal()){
@@ -52,5 +52,8 @@ public class Game {
 	public boolean over(Player p) {
 		return p.calcScore()>21;
 	}
-
+	public void isWinner(Player p, Player d){
+		
+		
+	}
 }
