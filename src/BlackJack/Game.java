@@ -28,7 +28,7 @@ public class Game {
 			}
 		}
 	}
-	public void showCards(Player m_player) {
-		// TODO Auto-generated method stub
+	public void showCards(Player p) {
+		this.out.println("Ace of Base\nTest of Prints");
 	}
 }
