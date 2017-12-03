@@ -37,6 +37,7 @@ public class Game {
 			if(input.standSignal()){
 				while(dealer.calcScore()<18)
 					dealer.getCard(deck);
+				play=false;
 			} else if (input.hitSignal()&&!over(player)){
 				player.getCard(deck);
 			} else if (input.quitSignal()){
