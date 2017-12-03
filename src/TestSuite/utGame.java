@@ -94,7 +94,7 @@ public class utGame {
 		Mockito.when(m_in.hitSignal()).thenReturn(true).thenReturn(false);
 		Mockito.when(m_in.quitSignal()).thenReturn(true);
 		g.run(m_player, m_dealer, m_deck);
-		Mockito.verify(m_out).println(expected);
+		Mockito.verify(m_out, Mockito.times(2)).println(expected);
 		Mockito.verify(m_player, Mockito.times(3)).getCard(m_deck);
 
 	}
