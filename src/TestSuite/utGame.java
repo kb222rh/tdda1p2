@@ -159,5 +159,14 @@ public class utGame {
 		Mockito.when(m_dealer.calcScore()).thenReturn(20);
 		g.run(m_player, m_dealer, m_deck);
 	}
+	@Test(timeout=1000)
+	public void Game_run_gameEndsWithStandAndPrintsWinner() throws IOException{
+		Mockito.when(m_in.standSignal()).thenReturn(true);
+		Mockito.when(m_dealer.calcScore()).thenReturn(20);
+		Mockito.when(m_player.calcScore()).thenReturn(10);
+		g.run(m_player, m_dealer, m_deck);
+		String expected=g.DWIN;
+		Mockito.verify(m_out).println(expected);
+	}
 }
 

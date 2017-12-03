@@ -26,10 +26,10 @@ public class Game {
 		dealer.getCard(deck);
 
 		while (play){
-			displayStatus(player, dealer);
-			
+			displayStatus(player, dealer);	
 			this.showMenu();
 			input.read();
+			
 			if(input.standSignal()){
 				while(dealer.calcScore()<18)
 					dealer.getCard(deck);
