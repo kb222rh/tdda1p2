@@ -8,7 +8,7 @@ import org.mockito.Mockito;
 import BlackJack.Card;
 import BlackJack.Deck;
 import BlackJack.Player;
-import BlackJack.Card.NAMES;
+
 
 public class utPlayer {
 	Player p;
@@ -58,20 +58,24 @@ public class utPlayer {
 		}
 		assertEquals(expectedSum, p.calcScore());
 	}
+	private Card cardValueStub(int v){
+		Card c=Mockito.mock(Card.class);
+		Mockito.when(c.getValue()).thenReturn(v);
+		return c;		
+	}
+	private void drawFromStub(Player a, Card c){
+		Deck m_d =deckStub(c);
+		a.getCard(m_d);
+	}
+	
 	@Test
 	public void Player_calcScore_accountsForAceInSoftHands(){
-		Card cAce1 = Mockito.mock(Card.class);
-		Mockito.when(cAce1.getValue()).thenReturn(11);
-		Card cKn1 = Mockito.mock(Card.class);
-		Mockito.when(cKn1.getValue()).thenReturn(10);
-		Card cQ1 = Mockito.mock(Card.class);
-		Mockito.when(cQ1.getValue()).thenReturn(10);
-		Deck d1=deckStub(cAce1);
-		p.getCard(d1);
-		Deck d2=deckStub(cKn1);
-		p.getCard(d2);
-		Deck d3=deckStub(cQ1);
-		p.getCard(d3);
+		Card cAce1 = cardValueStub(11);
+		Card cKn1 = cardValueStub(10);
+		Card cQ1 = cardValueStub(10);
+		drawFromStub(p, cAce1);
+		drawFromStub(p, cKn1);
+		drawFromStub(p, cQ1);
 		int expected = 21;
 		int actual = p.calcScore();
 		assertSame(actual, expected);
