@@ -20,6 +20,10 @@ public class Game {
 	
 	public void run(Player player, Player dealer, Deck deck) throws IOException {
 		boolean play=true;
+		player.getCard(deck);
+		dealer.getCard(deck);
+		player.getCard(deck);
+		dealer.getCard(deck);
 		while (play){
 			this.showMenu();
 			if (input.quitSignal()==true){
