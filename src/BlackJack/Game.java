@@ -9,6 +9,7 @@ public class Game {
 	}
 	public void showMenu() {
 		// TODO Auto-generated method stub
+		this.out.println("(s)tand, (h)it, (q)uit");
 	}
 
 }
