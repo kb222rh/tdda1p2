@@ -53,7 +53,7 @@ public class Game {
 		return p.calcScore()>21;
 	}
 	public void isWinner(Player p, Player d){
-		
+		this.out.println("Dealer wins!");
 		
 	}
 }
