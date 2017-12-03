@@ -149,5 +149,12 @@ public class utGame {
 		g.isWinner(m_player, m_dealer);
 		Mockito.verify(m_out).println(expected);
 	}
+	@Test
+	public void Game_isWinner_PrintsDealerWinnerIfPlayerScoreAbove21(){
+		Mockito.when(m_player.calcScore()).thenReturn(25);
+		String expected="Dealer wins!";
+		g.isWinner(m_player, m_dealer);
+		Mockito.verify(m_out).println(expected);
+	}
 }
 
