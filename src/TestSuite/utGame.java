@@ -144,5 +144,14 @@ public class utGame {
 		g.isWinner(m_player, m_dealer);
 		Mockito.verify(m_out).println(e);
 	}
+	@Test
+	public void Game_run_PlayerCannotHitIfAbove20() throws IOException{
+		
+		Mockito.when(m_player.calcScore()).thenReturn(21, 23, 25, 27);
+		Mockito.when(m_in.hitSignal()).thenReturn(true, true,true,true,false);
+		Mockito.when(m_in.quitSignal()).thenReturn(true);
+		g.run(m_player, m_dealer, m_deck);
+		Mockito.verify(m_player, Mockito.never()).getCard(m_deck);
+	}
 }
 
