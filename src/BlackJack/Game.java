@@ -17,28 +17,27 @@ public class Game {
 
 	public void run(Player player, Player dealer, Deck deck) throws IOException {
 		boolean play=true;
-
 		deck.shuffle();
-
 		player.getCard(deck);
 		dealer.getCard(deck);
 		player.getCard(deck);
 		dealer.getCard(deck);
-
-		this.out.println("Dealer: "+dealer.calcScore());
-		showCards(dealer);
-		this.out.println("------------");
-		this.out.println("Player: "+player.calcScore());
-		showCards(player);
-		this.out.println("------------");
 
 		while (play){
+			this.out.println("Dealer: "+dealer.calcScore());
+			showCards(dealer);
+
+			this.out.println("Player: "+player.calcScore());
+			showCards(player);
+			
 			this.showMenu();
-			if (input.hitSignal()){
-				player.getCard(deck);
-			} else if (input.quitSignal()==true){
+			input.read();
+			 if (input.hitSignal()==true){
+					player.getCard(deck);
+				} else if (input.quitSignal()==true){
 				play=false;
 			}
+			
 		}
 	}
 
@@ -46,6 +45,7 @@ public class Game {
 		for (Card c: p.showHand()){
 			this.out.println(c.getFace());
 		}
+		this.out.println("------------");
 	}
 
 }

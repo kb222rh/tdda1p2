@@ -13,20 +13,20 @@ public class KeyInput {
 	}
 
 	public boolean quitSignal() throws IOException{
-		return "q".equals(read());
+		return saved.equals("q");
 	}
 
 	public boolean hitSignal() throws IOException {
-		return "h".equals(read());
+		return saved.equals("h");
 	}
 	
 	public boolean standSignal() throws IOException {
-		return "s".equals(read());
+		return saved.equals("s");
 	}
 	
-	public String read() throws IOException {
-		String s=inTo.readLine();
-		return s;
+	public void read() throws IOException {
+		saved=inTo.readLine();
+		
 	}
 
 }
