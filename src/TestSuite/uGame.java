@@ -19,7 +19,7 @@ public class uGame {
 
 	@Test
 	public void Game_showMenu_printsMenu() {
-		String expected = "(s)tand, (h)it, (q)uit";	
+		String expected = g.MENU;	
 		g.showMenu();
 		Mockito.verify(m_out).println(expected);
 	}

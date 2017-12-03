@@ -4,12 +4,12 @@ import java.io.PrintStream;
 
 public class Game {
 	PrintStream out;
+	public final String MENU="(s)tand, (h)it, (q)uit";
 	public Game(PrintStream o) {
 		this.out=o;
 	}
 	public void showMenu() {
-		// TODO Auto-generated method stub
-		this.out.println("(s)tand, (h)it, (q)uit");
+		this.out.println(MENU);
 	}
 
 }
