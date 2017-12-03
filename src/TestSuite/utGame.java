@@ -114,7 +114,7 @@ public class utGame {
 	public void Game_run_StandSignalDealerDrawsCardsTo17OrEqual() throws IOException{
 		Mockito.when(m_in.standSignal()).thenReturn(true).thenReturn(false);
 		Mockito.when(m_in.quitSignal()).thenReturn(true);
-		Mockito.when(m_dealer.calcScore()).thenReturn(16);
+		Mockito.when(m_dealer.calcScore()).thenReturn(16).thenReturn(18);
 		g.run(m_player, m_dealer, m_deck);
 		Mockito.verify(m_dealer, Mockito.atLeast(3)).getCard(m_deck);
 	}

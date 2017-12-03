@@ -32,7 +32,7 @@ public class Game {
 			
 			this.showMenu();
 			input.read();
-			 if (input.hitSignal()==true){
+			if (input.hitSignal()==true){
 					player.getCard(deck);
 				} else if (input.quitSignal()==true){
 				play=false;
