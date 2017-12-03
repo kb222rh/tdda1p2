@@ -1,4 +1,6 @@
 package TestSuite;
+import static org.junit.Assert.*;
+
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -96,7 +98,11 @@ public class utGame {
 		g.run(m_player, m_dealer, m_deck);
 		Mockito.verify(m_out, Mockito.times(2)).println(expected);
 		Mockito.verify(m_player, Mockito.times(3)).getCard(m_deck);
-
+	}
+	@Test
+	public void Game_over_trueAbove21(){
+		Mockito.when(m_player.calcScore()).thenReturn(22);
+		assertTrue(g.over(m_player));
 	}
 }
 

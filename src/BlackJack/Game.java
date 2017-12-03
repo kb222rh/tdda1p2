@@ -47,5 +47,9 @@ public class Game {
 		}
 		this.out.println("------------");
 	}
+	public boolean over(Player m_player) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 }
