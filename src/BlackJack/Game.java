@@ -34,6 +34,7 @@ public class Game {
 				while(dealer.calcScore()<18)
 					dealer.getCard(deck);
 				play=false;
+				isWinner(player,dealer);
 			} else if (input.hitSignal()&&!over(player)){
 				player.getCard(deck);
 			} else if (input.quitSignal()){
