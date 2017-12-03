@@ -53,7 +53,7 @@ public class Game {
 		return p.calcScore()>21;
 	}
 	public void isWinner(Player p, Player d){
-		if (d.calcScore()>=p.calcScore()&&!over(d))
+		if (d.calcScore()>=p.calcScore()&&!over(d)||over(p))
 		this.out.println("Dealer wins!");
 		else 
 		this.out.println("Player wins!");
