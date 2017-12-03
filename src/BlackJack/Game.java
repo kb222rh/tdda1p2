@@ -7,6 +7,8 @@ public class Game {
 	PrintStream out;
 	KeyInput input;
 	public final String MENU="(s)tand, (h)it, (q)uit";
+	public final String DWIN="Dealer wins!";
+	public final String PWIN="Player wins!";
 	public Game(PrintStream o, KeyInput k) {
 		this.out=o;
 		this.input=k;
@@ -54,8 +56,8 @@ public class Game {
 	}
 	public void isWinner(Player p, Player d){
 		if (d.calcScore()>=p.calcScore()&&!over(d)||over(p))
-		this.out.println("Dealer wins!");
+		this.out.println(DWIN);
 		else 
-		this.out.println("Player wins!");
+		this.out.println(PWIN);
 	}
 }

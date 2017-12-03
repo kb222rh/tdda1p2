@@ -120,41 +120,29 @@ public class utGame {
 	}
 	@Test
 	public void Game_isWinner_PrintsDealerWinnerIfDealerHandBeatsPlayer(){
-		Mockito.when(m_dealer.calcScore()).thenReturn(21);
-		Mockito.when(m_player.calcScore()).thenReturn(20);
-		String expected="Dealer wins!";
-		g.isWinner(m_player, m_dealer);
-		Mockito.verify(m_out).println(expected);
+		verifyWinnerPrint(20,21,g.DWIN);
 	}
 	@Test
 	public void Game_isWinner_PrintsPlayerWinnerIfDealerHandWorseThenPlayerHand(){
-		Mockito.when(m_dealer.calcScore()).thenReturn(20);
-		Mockito.when(m_player.calcScore()).thenReturn(21);
-		String expected="Player wins!";
-		g.isWinner(m_player, m_dealer);
-		Mockito.verify(m_out).println(expected);
+		verifyWinnerPrint(21,20,g.PWIN);
 	}
 	@Test
 	public void Game_isWinner_PrintsDealerWinnerOnSameHand(){
-		Mockito.when(m_dealer.calcScore()).thenReturn(21);
-		Mockito.when(m_player.calcScore()).thenReturn(21);
-		String expected="Dealer wins!";
-		g.isWinner(m_player, m_dealer);
-		Mockito.verify(m_out).println(expected);
+		verifyWinnerPrint(21,21,g.DWIN);
 	}
 	@Test
 	public void Game_isWinner_PrintsPlayerWinnerIfDealerScoreAbove21(){
-		Mockito.when(m_dealer.calcScore()).thenReturn(25);
-		String expected="Player wins!";
-		g.isWinner(m_player, m_dealer);
-		Mockito.verify(m_out).println(expected);
+		verifyWinnerPrint(0,25,g.PWIN);
 	}
 	@Test
 	public void Game_isWinner_PrintsDealerWinnerIfPlayerScoreAbove21(){
-		Mockito.when(m_player.calcScore()).thenReturn(25);
-		String expected="Dealer wins!";
+		verifyWinnerPrint(25,0,g.DWIN);
+	}
+	private void verifyWinnerPrint(int a, int b, String e){
+		Mockito.when(m_player.calcScore()).thenReturn(a);
+		Mockito.when(m_dealer.calcScore()).thenReturn(b);
 		g.isWinner(m_player, m_dealer);
-		Mockito.verify(m_out).println(expected);
+		Mockito.verify(m_out).println(e);
 	}
 }
 
