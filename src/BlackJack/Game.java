@@ -18,7 +18,14 @@ public class Game {
 	
 	
 	public void run() throws IOException {
-
+		boolean play=true;
+		while (play){
+			this.showMenu();
+			if (input.quitSignal()==true){
+				play=false;
+			}
+			
+		}
 	}
 	
 }
