@@ -123,7 +123,7 @@ public class utGame {
 		Mockito.when(m_dealer.calcScore()).thenReturn(21);
 		Mockito.when(m_player.calcScore()).thenReturn(20);
 		String expected="Dealer wins!";
-		g.isWinner(m_player, m_player);
+		g.isWinner(m_player, m_dealer);
 		Mockito.verify(m_out).println(expected);
 	}
 	@Test
@@ -131,7 +131,7 @@ public class utGame {
 		Mockito.when(m_dealer.calcScore()).thenReturn(20);
 		Mockito.when(m_player.calcScore()).thenReturn(21);
 		String expected="Player wins!";
-		g.isWinner(m_player, m_player);
+		g.isWinner(m_player, m_dealer);
 		Mockito.verify(m_out).println(expected);
 	}
 }
