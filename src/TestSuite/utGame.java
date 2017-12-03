@@ -151,7 +151,7 @@ public class utGame {
 		Mockito.when(m_in.hitSignal()).thenReturn(true, true,true,true,false);
 		Mockito.when(m_in.quitSignal()).thenReturn(true);
 		g.run(m_player, m_dealer, m_deck);
-		Mockito.verify(m_player, Mockito.never()).getCard(m_deck);
+		Mockito.verify(m_player, Mockito.times(2)).getCard(m_deck);
 	}
 }
 
