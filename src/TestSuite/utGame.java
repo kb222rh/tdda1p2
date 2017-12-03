@@ -81,6 +81,12 @@ public class utGame {
 		Mockito.verify(m_player, Mockito.times(1)).showHand();
 		Mockito.verify(m_dealer, Mockito.times(1)).showHand();
 	}
-
+	@Test
+	public void Game_run_invokesCalcScoreforPlayerAndDealer() throws IOException{
+		Mockito.when(m_in.quitSignal()).thenReturn(true);
+		g.run(m_player, m_dealer, m_deck);
+		Mockito.verify(m_player, Mockito.times(1)).calcScore();
+		Mockito.verify(m_dealer, Mockito.times(1)).calcScore();
+	}
 }
 
