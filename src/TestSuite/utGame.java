@@ -134,5 +134,13 @@ public class utGame {
 		g.isWinner(m_player, m_dealer);
 		Mockito.verify(m_out).println(expected);
 	}
+	@Test
+	public void Game_isWinner_PrintsDealerWinnerOnSameHand(){
+		Mockito.when(m_dealer.calcScore()).thenReturn(21);
+		Mockito.when(m_player.calcScore()).thenReturn(21);
+		String expected="Dealer wins!";
+		g.isWinner(m_player, m_dealer);
+		Mockito.verify(m_out).println(expected);
+	}
 }
 
