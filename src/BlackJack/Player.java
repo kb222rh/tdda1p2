@@ -18,4 +18,9 @@ public class Player {
 		return hand;
 	}
 
+	public int calcScore() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

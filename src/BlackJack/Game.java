@@ -17,17 +17,21 @@ public class Game {
 
 	public void run(Player player, Player dealer, Deck deck) throws IOException {
 		boolean play=true;
+
 		deck.shuffle();
+
 		player.getCard(deck);
 		dealer.getCard(deck);
 		player.getCard(deck);
 		dealer.getCard(deck);
+
 		this.out.println("Dealer: ");
 		showCards(dealer);
 		this.out.println("------------");
 		this.out.println("Player: ");
 		showCards(player);
 		this.out.println("------------");
+
 		while (play){
 			this.showMenu();
 			if (input.quitSignal()==true){
@@ -35,9 +39,11 @@ public class Game {
 			}
 		}
 	}
+
 	public void showCards(Player p) {
 		for (Card c: p.showHand()){
 			this.out.println(c.getFace());
 		}
 	}
+
 }

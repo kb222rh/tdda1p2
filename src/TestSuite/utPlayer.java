@@ -45,4 +45,16 @@ public class utPlayer {
 		assertEquals(c1, actual.get(0));
 		assertEquals(c2, actual.get(1));
 	}
+	@Test
+	public void Player_calcScore_returnsSumOfCardValues(){
+		int expectedSum=0;
+		for (int i = 0; i<10; i++){
+			Card c = cardStub("Ace of Random");
+			Deck d= deckStub(c);
+			Mockito.when(c.getValue()).thenReturn(i);
+			p.getCard(d);
+			expectedSum+=i;		
+		}
+		assertEquals(expectedSum, p.calcScore());
+	}
 }

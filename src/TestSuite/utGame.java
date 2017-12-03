@@ -81,5 +81,6 @@ public class utGame {
 		Mockito.verify(m_player, Mockito.times(1)).showHand();
 		Mockito.verify(m_dealer, Mockito.times(1)).showHand();
 	}
+
 }
 
