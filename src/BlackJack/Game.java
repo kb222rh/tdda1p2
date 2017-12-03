@@ -32,7 +32,10 @@ public class Game {
 			
 			this.showMenu();
 			input.read();
-			if (input.hitSignal()==true){
+			 if(input.standSignal()==true){
+				 while(dealer.calcScore()<18)
+					 dealer.getCard(deck);
+			 } else if (input.hitSignal()==true){
 					player.getCard(deck);
 				} else if (input.quitSignal()==true){
 				play=false;
