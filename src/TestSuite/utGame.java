@@ -126,5 +126,13 @@ public class utGame {
 		g.isWinner(m_player, m_player);
 		Mockito.verify(m_out).println(expected);
 	}
+	@Test
+	public void Game_isWinner_PrintsPlayerWinnerIfDealerHandWorseThenPlayerHand(){
+		Mockito.when(m_dealer.calcScore()).thenReturn(20);
+		Mockito.when(m_player.calcScore()).thenReturn(21);
+		String expected="Player wins!";
+		g.isWinner(m_player, m_player);
+		Mockito.verify(m_out).println(expected);
+	}
 }
 
