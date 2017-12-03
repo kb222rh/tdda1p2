@@ -61,9 +61,13 @@ public class utGame {
 		a.add(c1);
 		a.add(c2);
 		Mockito.when(m_player.showHand()).thenReturn(a);
-		String expected=c1.getFace()+"\n"+c2.getFace();
+
 		g.showCards(m_player);
-		Mockito.verify(m_out).println(expected);
+		for (Card c : a){
+			String expected=c.getFace();
+			Mockito.verify(m_out).println(expected);
 		}
+
+	}
 }
 

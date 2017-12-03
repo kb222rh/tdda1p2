@@ -29,6 +29,8 @@ public class Game {
 		}
 	}
 	public void showCards(Player p) {
-		this.out.println("Ace of Base\nTest of Prints");
+		for (Card c: p.showHand()){
+			this.out.println(c.getFace());
+		}
 	}
 }
