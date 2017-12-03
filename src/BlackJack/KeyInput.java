@@ -21,12 +21,14 @@ public class KeyInput {
 	public boolean hitSignal() throws IOException {
 		return read()=="h";
 	}
+	
+	public boolean standSignal() throws IOException {
+		return read()=="s";
+	}
+	
 	public String read() throws IOException {
 		String s=inTo.readLine();
 		return s;
 	}
 
-	public boolean standSignal() throws IOException {
-		return read()=="s";
-	}
 }
