@@ -28,16 +28,19 @@ public class utKeyInput {
 	@Test
 	public void keyInput_read_sendsQuitCommandOnQ() throws IOException {
 		Mockito.when(m_in.readLine()).thenReturn("q");
+		k.read();
 		assertTrue(k.quitSignal());
 	}
 	@Test
 	public void keyInput_read_sendsHitCommandOnH() throws IOException {
 		Mockito.when(m_in.readLine()).thenReturn("h");
+		k.read();
 		assertTrue(k.hitSignal());
 	}
 	@Test
 	public void keyInput_read_sendsStandCommandOnS() throws IOException {
 		Mockito.when(m_in.readLine()).thenReturn("s");
+		k.read();
 		assertTrue(k.standSignal());
 	}
 }
