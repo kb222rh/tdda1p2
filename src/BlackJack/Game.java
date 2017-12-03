@@ -29,17 +29,17 @@ public class Game {
 
 			this.out.println("Player: "+player.calcScore());
 			showCards(player);
-			
+
 			this.showMenu();
 			input.read();
-			 if(input.standSignal()==true){
-				 while(dealer.calcScore()<18)
-					 dealer.getCard(deck);
-			 } else if (input.hitSignal()==true){
-					player.getCard(deck);
-				} else if (input.quitSignal()==true){
+			if(input.standSignal()){
+				while(dealer.calcScore()<18)
+					dealer.getCard(deck);
+			} else if (input.hitSignal()){
+				player.getCard(deck);
+			} else if (input.quitSignal()){
 				play=false;
-				}
+			}
 		}
 	}
 
