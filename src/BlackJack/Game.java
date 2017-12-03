@@ -22,6 +22,12 @@ public class Game {
 		dealer.getCard(deck);
 		player.getCard(deck);
 		dealer.getCard(deck);
+		this.out.println("Dealer: ");
+		showCards(dealer);
+		this.out.println("------------");
+		this.out.println("Player: ");
+		showCards(player);
+		this.out.println("------------");
 		while (play){
 			this.showMenu();
 			if (input.quitSignal()==true){
