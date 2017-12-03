@@ -47,9 +47,9 @@ public class Game {
 		}
 		this.out.println("------------");
 	}
-	public boolean over(Player m_player) {
+	public boolean over(Player p) {
 		// TODO Auto-generated method stub
-		return false;
+		return p.calcScore()>21;
 	}
 
 }
