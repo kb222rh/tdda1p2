@@ -34,7 +34,9 @@ public class Game {
 
 		while (play){
 			this.showMenu();
-			if (input.quitSignal()==true){
+			if (input.hitSignal()){
+				player.getCard(deck);
+			} else if (input.quitSignal()==true){
 				play=false;
 			}
 		}
