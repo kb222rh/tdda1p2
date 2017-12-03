@@ -1,9 +1,13 @@
 package TestSuite;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.ArrayList;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
+
+import BlackJack.Card;
 import BlackJack.Deck;
 import BlackJack.Game;
 import BlackJack.KeyInput;
@@ -47,6 +51,19 @@ public class utGame {
 		Mockito.verify(m_player, Mockito.times(2)).getCard(m_deck);
 		Mockito.verify(m_dealer, Mockito.times(2)).getCard(m_deck);
 	}
-
+	@Test
+	public void Game_showCards_PrintsPlayerHand() throws IOException{
+		Card c1=Mockito.mock(Card.class);
+		Card c2=Mockito.mock(Card.class);
+		Mockito.when(c1.getFace()).thenReturn("Ace of Base");
+		Mockito.when(c2.getFace()).thenReturn("Test of Prints");
+		ArrayList<Card> a=new ArrayList<Card>();
+		a.add(c1);
+		a.add(c2);
+		Mockito.when(m_player.showHand()).thenReturn(a);
+		String expected=c1.getFace()+"\n"+c2.getFace();
+		g.showCards(m_player);
+		Mockito.verify(m_out).println(expected);
+		}
 }
 

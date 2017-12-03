@@ -28,4 +28,7 @@ public class Game {
 			}
 		}
 	}
+	public void showCards(Player m_player) {
+		// TODO Auto-generated method stub
+	}
 }
