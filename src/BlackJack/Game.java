@@ -25,10 +25,10 @@ public class Game {
 		player.getCard(deck);
 		dealer.getCard(deck);
 
-		this.out.println("Dealer: ");
+		this.out.println("Dealer: "+dealer.calcScore());
 		showCards(dealer);
 		this.out.println("------------");
-		this.out.println("Player: ");
+		this.out.println("Player: "+player.calcScore());
 		showCards(player);
 		this.out.println("------------");
 
