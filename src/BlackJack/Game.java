@@ -10,14 +10,11 @@ public class Game {
 	public Game(PrintStream o, KeyInput k) {
 		this.out=o;
 		this.input=k;
-		
 	}
 	public void showMenu() {
 		this.out.println(MENU);
 	}
-	
 
-	
 	public void run(Player player, Player dealer, Deck deck) throws IOException {
 		boolean play=true;
 		player.getCard(deck);
@@ -29,8 +26,6 @@ public class Game {
 			if (input.quitSignal()==true){
 				play=false;
 			}
-			
 		}
 	}
-	
 }
