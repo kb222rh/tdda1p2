@@ -19,8 +19,11 @@ public class Player {
 	}
 
 	public int calcScore() {
-		// TODO Auto-generated method stub
-		return 0;
+		int sum=0;
+		for (Card c : hand){
+			sum+=c.getValue();
+		}
+		return sum;
 	}
 
 }
