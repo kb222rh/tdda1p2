@@ -67,7 +67,12 @@ public class utGame {
 			String expected=c.getFace();
 			Mockito.verify(m_out).println(expected);
 		}
-
+	}
+	@Test
+	public void Game_run_invokeShuffleOnDeck() throws IOException{
+		Mockito.when(m_in.quitSignal()).thenReturn(true);
+		g.run(m_player, m_dealer, m_deck);
+		Mockito.verify(m_deck, Mockito.times(1)).shuffle();
 	}
 }
 
