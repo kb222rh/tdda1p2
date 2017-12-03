@@ -153,5 +153,10 @@ public class utGame {
 		g.run(m_player, m_dealer, m_deck);
 		Mockito.verify(m_player, Mockito.times(2)).getCard(m_deck);
 	}
+	@Test(timeout=1000)
+	public void Game_run_gameEndsWithoutQuitSignalAfterStand() throws IOException{
+		Mockito.when(m_in.standSignal()).thenReturn(true);
+		g.run(m_player, m_dealer, m_deck);
+	}
 }
 
