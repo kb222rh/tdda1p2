@@ -104,5 +104,13 @@ public class utGame {
 		Mockito.when(m_player.calcScore()).thenReturn(22);
 		assertTrue(g.over(m_player));
 	}
+	//redundant green
+	@Test
+	public void Game_over_falseBelow21(){
+		Mockito.when(m_player.calcScore()).thenReturn(19);
+		assertFalse(g.over(m_player));
+	}
+
+	
 }
 

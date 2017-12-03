@@ -36,8 +36,7 @@ public class Game {
 					player.getCard(deck);
 				} else if (input.quitSignal()==true){
 				play=false;
-			}
-			
+				}
 		}
 	}
 
@@ -48,7 +47,6 @@ public class Game {
 		this.out.println("------------");
 	}
 	public boolean over(Player p) {
-		// TODO Auto-generated method stub
 		return p.calcScore()>21;
 	}
 

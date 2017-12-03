@@ -8,6 +8,7 @@ import org.mockito.Mockito;
 import BlackJack.Card;
 import BlackJack.Deck;
 import BlackJack.Player;
+import BlackJack.Card.NAMES;
 
 public class utPlayer {
 	Player p;
@@ -56,5 +57,23 @@ public class utPlayer {
 			expectedSum+=i;		
 		}
 		assertEquals(expectedSum, p.calcScore());
+	}
+	@Test
+	public void Player_calcScore_accountsForAceInSoftHands(){
+		Card cAce1 = Mockito.mock(Card.class);
+		Mockito.when(cAce1.getValue()).thenReturn(11);
+		Card cKn1 = Mockito.mock(Card.class);
+		Mockito.when(cKn1.getValue()).thenReturn(10);
+		Card cQ1 = Mockito.mock(Card.class);
+		Mockito.when(cQ1.getValue()).thenReturn(10);
+		Deck d1=deckStub(cAce1);
+		p.getCard(d1);
+		Deck d2=deckStub(cKn1);
+		p.getCard(d2);
+		Deck d3=deckStub(cQ1);
+		p.getCard(d3);
+		int expected = 21;
+		int actual = p.calcScore();
+		assertSame(actual, expected);
 	}
 }
