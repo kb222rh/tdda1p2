@@ -22,7 +22,7 @@ public class utKeyInput {
 		m_in = Mockito.mock(BufferedReader.class);
 		m_out=Mockito.mock(PrintStream.class);
 		m_g=Mockito.mock(Game.class);
-		k=new KeyInput(m_in, m_out);
+		k=new KeyInput(m_in);
 	}
 
 	@Test

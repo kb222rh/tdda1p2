@@ -2,28 +2,26 @@ package BlackJack;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.PrintStream;
+
 
 
 public class KeyInput {
 	BufferedReader inTo;
-	PrintStream outTo;
 	String saved;
-	public KeyInput(BufferedReader m_in, PrintStream p){
+	public KeyInput(BufferedReader m_in){
 		this.inTo=m_in;
-		this.outTo=p;
 	}
 
 	public boolean quitSignal() throws IOException{
-		return read()=="q";
+		return "q".equals(read());
 	}
 
 	public boolean hitSignal() throws IOException {
-		return read()=="h";
+		return "h".equals(read());
 	}
 	
 	public boolean standSignal() throws IOException {
-		return read()=="s";
+		return "s".equals(read());
 	}
 	
 	public String read() throws IOException {
