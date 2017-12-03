@@ -88,5 +88,15 @@ public class utGame {
 		Mockito.verify(m_player, Mockito.times(1)).calcScore();
 		Mockito.verify(m_dealer, Mockito.times(1)).calcScore();
 	}
+	@Test
+	public void Game_run_printsMenuAndDealsPlayerACardOnHitSignal() throws IOException{
+		String expected = g.MENU;
+		Mockito.when(m_in.hitSignal()).thenReturn(true).thenReturn(false);
+		Mockito.when(m_in.quitSignal()).thenReturn(true);
+		g.run(m_player, m_dealer, m_deck);
+		Mockito.verify(m_out).println(expected);
+		Mockito.verify(m_player, Mockito.times(3)).getCard(m_deck);
+
+	}
 }
 
