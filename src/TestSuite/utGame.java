@@ -74,5 +74,12 @@ public class utGame {
 		g.run(m_player, m_dealer, m_deck);
 		Mockito.verify(m_deck, Mockito.times(1)).shuffle();
 	}
+	@Test
+	public void Game_run_invokesShowHandforPlayerAndDealer() throws IOException{
+		Mockito.when(m_in.quitSignal()).thenReturn(true);
+		g.run(m_player, m_dealer, m_deck);
+		Mockito.verify(m_player, Mockito.times(1)).showHand();
+		Mockito.verify(m_dealer, Mockito.times(1)).showHand();
+	}
 }
 
