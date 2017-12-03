@@ -156,6 +156,7 @@ public class utGame {
 	@Test(timeout=1000)
 	public void Game_run_gameEndsWithoutQuitSignalAfterStand() throws IOException{
 		Mockito.when(m_in.standSignal()).thenReturn(true);
+		Mockito.when(m_dealer.calcScore()).thenReturn(20);
 		g.run(m_player, m_dealer, m_deck);
 	}
 }
