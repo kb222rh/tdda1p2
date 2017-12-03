@@ -10,14 +10,15 @@ public class Game {
 	public Game(PrintStream o, KeyInput k) {
 		this.out=o;
 		this.input=k;
+		
 	}
 	public void showMenu() {
 		this.out.println(MENU);
 	}
 	
+
 	
-	
-	public void run() throws IOException {
+	public void run(Player player, Player dealer, Deck deck) throws IOException {
 		boolean play=true;
 		while (play){
 			this.showMenu();
