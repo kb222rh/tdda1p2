@@ -26,11 +26,7 @@ public class Game {
 		dealer.getCard(deck);
 
 		while (play){
-			this.out.println("Dealer: "+dealer.calcScore());
-			showCards(dealer);
-
-			this.out.println("Player: "+player.calcScore());
-			showCards(player);
+			displayStatus(player, dealer);
 			
 			this.showMenu();
 			input.read();
@@ -60,5 +56,13 @@ public class Game {
 		this.out.println(DWIN);
 		else 
 		this.out.println(PWIN);
+	}
+	
+	private void displayStatus(Player player, Player dealer){
+		this.out.println("Dealer: "+dealer.calcScore());
+		showCards(dealer);
+
+		this.out.println("Player: "+player.calcScore());
+		showCards(player);
 	}
 }
